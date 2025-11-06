@@ -12,3 +12,6 @@ input {
 body{
     background-color: rgb(139, 139, 139);
 }
+h1{
+  font-size: 100px;
+}

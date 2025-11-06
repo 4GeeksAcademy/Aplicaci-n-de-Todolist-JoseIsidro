@@ -11,8 +11,9 @@ const Home = () => {
 	const nuevaTarea = (e) => {
 		if (e.key === "Enter" && tarea.trim() !== "") {
 			setList([...list, tarea]);
-			setTarea('');
+			return setTarea('')
 		}
+		
 	}
 	function eliminar(idEliminar) {
 		let filtroDelist = list.filter((_, index) => index !== idEliminar);
@@ -27,6 +28,7 @@ const Home = () => {
 					<input
 						className="border-0 my-1 fs-3 text-secondary"
 						type="text"
+						value={tarea}
 						onChange={(e) => setTarea(e.target.value)}
 						onKeyDown={nuevaTarea}
 						placeholder="What need to be done?" />
